@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://tasirahhamedlaskar.github.io/sitemap.xml
+
+# Block access to certain file types
+Disallow: /*.css$
+Disallow: /*.js$
+Disallow: /script/
+Disallow: /style/
+
+# Allow crawling of images
+Allow: /image/
