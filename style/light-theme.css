@@ -1,0 +1,992 @@
+/* =====================================================
+   LIGHT THEME — Complete Override
+   ===================================================== */
+
+/* ---- Light Theme Variables ---- */
+.light-theme {
+    --primary-color: #5b52e8;
+    --secondary-color: #8b36d9;
+    --accent-color: #0284c7;
+    --neon-cyan: #0284c7;
+    --neon-purple: #8b36d9;
+    --text-primary: #0f172a;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    --background-dark: #f0f4ff;
+    --background-secondary: #ffffff;
+    --surface: rgba(255, 255, 255, 0.92);
+    --surface-light: rgba(241, 245, 255, 0.95);
+    --border-color: rgba(99, 102, 241, 0.15);
+    --border-glow: rgba(91, 82, 232, 0.25);
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --glass-border: rgba(99, 102, 241, 0.18);
+    --gradient-primary: linear-gradient(135deg, #5b52e8, #8b36d9);
+    --gradient-secondary: linear-gradient(135deg, #0284c7, #5b52e8);
+    --gradient-neon: linear-gradient(135deg, #5b52e8 0%, #0284c7 50%, #8b36d9 100%);
+    --gradient-cyber: linear-gradient(180deg, #f0f4ff 0%, #ffffff 50%, #f0f4ff 100%);
+    --glow-primary: 0 0 16px rgba(91, 82, 232, 0.25), 0 0 30px rgba(91, 82, 232, 0.12);
+    --glow-cyan: 0 0 16px rgba(2, 132, 199, 0.25), 0 0 30px rgba(2, 132, 199, 0.1);
+    --shadow-sm: 0 1px 4px rgba(91, 82, 232, 0.08);
+    --shadow-md: 0 4px 16px rgba(91, 82, 232, 0.1);
+    --shadow-lg: 0 10px 30px rgba(91, 82, 232, 0.12);
+    --shadow-xl: 0 20px 50px rgba(91, 82, 232, 0.15);
+    --shadow-glow: 0 0 20px rgba(91, 82, 232, 0.2);
+    --shadow-light: rgba(91, 82, 232, 0.08);
+    /* Font vars match main CSS */
+    --font-primary: 'Outfit', sans-serif;
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-mono: 'Fira Code', monospace;
+}
+
+/* ---- Background in Light Mode ---- */
+.light-theme body {
+    background: var(--background-dark);
+    color: var(--text-primary);
+}
+
+.light-theme #bg-animation {
+    background:
+        radial-gradient(ellipse at 15% 50%, rgba(91, 82, 232, 0.07) 0%, transparent 55%),
+        radial-gradient(ellipse at 85% 20%, rgba(2, 132, 199, 0.05) 0%, transparent 45%),
+        radial-gradient(ellipse at 50% 90%, rgba(139, 54, 217, 0.05) 0%, transparent 50%),
+        #f0f4ff;
+}
+
+/* ---- Navbar Light ---- */
+.light-theme .navbar {
+    background: rgba(240, 244, 255, 0.82);
+    border-bottom: 1px solid rgba(91, 82, 232, 0.12);
+}
+
+.light-theme .navbar.scrolled {
+    background: rgba(240, 244, 255, 0.96);
+    box-shadow: 0 4px 24px rgba(91, 82, 232, 0.1);
+    border-bottom-color: rgba(91, 82, 232, 0.18);
+}
+
+.light-theme .logo-text {
+    background: var(--gradient-neon);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.light-theme .logo-img {
+    border-color: rgba(91, 82, 232, 0.35);
+    box-shadow: 0 0 10px rgba(91, 82, 232, 0.2);
+}
+
+.light-theme .nav-link {
+    color: var(--text-secondary);
+}
+
+.light-theme .nav-link:hover,
+.light-theme .nav-link.active {
+    color: var(--primary-color);
+    background: rgba(91, 82, 232, 0.07);
+}
+
+.light-theme .hamburger .bar {
+    background: var(--text-primary);
+}
+
+/* ---- Mobile Nav Light ---- */
+@media (max-width: 768px) {
+    .light-theme .nav-menu {
+        background: rgba(240, 244, 255, 0.98);
+        backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(91, 82, 232, 0.12);
+    }
+
+    .light-theme .nav-link {
+        color: var(--text-secondary) !important;
+    }
+
+    .light-theme .nav-link:hover,
+    .light-theme .nav-link.active {
+        color: var(--primary-color) !important;
+        background: rgba(91, 82, 232, 0.07);
+    }
+}
+
+/* ---- Hero Light ---- */
+.light-theme .hero {
+    background: transparent;
+}
+
+.light-theme .hero-greeting {
+    color: var(--primary-color);
+}
+
+.light-theme .hero-description {
+    color: var(--text-secondary);
+}
+
+.light-theme .spec-tag {
+    background: rgba(91, 82, 232, 0.07);
+    border-color: rgba(91, 82, 232, 0.25);
+    color: var(--primary-color);
+}
+
+.light-theme .stat-box {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(91, 82, 232, 0.14);
+}
+
+.light-theme .stat-label {
+    color: var(--text-muted);
+}
+
+/* ---- Cards Light (About, Skills, Projects, Contact) ---- */
+.light-theme .about-card,
+.light-theme .skill-category,
+.light-theme .project-card,
+.light-theme .contact-card,
+.light-theme .contact-form,
+.light-theme .timeline-content {
+    background: rgba(255, 255, 255, 0.88);
+    border-color: rgba(91, 82, 232, 0.14);
+    border-top-color: rgba(91, 82, 232, 0.4);
+    box-shadow: var(--shadow-md);
+    color: var(--text-primary);
+}
+
+.light-theme .about-card:hover,
+.light-theme .skill-category:hover,
+.light-theme .project-card:hover,
+.light-theme .contact-card:hover,
+.light-theme .contact-form:hover,
+.light-theme .timeline-content:hover {
+    box-shadow: var(--shadow-xl), var(--glow-primary);
+    border-color: rgba(91, 82, 232, 0.35);
+}
+
+.light-theme .card-content h3,
+.light-theme .timeline-content h3,
+.light-theme .timeline-content h4,
+.light-theme .contact-card h3,
+.light-theme .category-header h3 {
+    color: var(--text-primary);
+}
+
+.light-theme .card-content p,
+.light-theme .timeline-content p,
+.light-theme .contact-card p,
+.light-theme .contact-item p {
+    color: var(--text-secondary);
+}
+
+/* ---- Skill Items Light ---- */
+.light-theme .skill-item {
+    background: rgba(241, 245, 255, 0.9);
+    border-color: rgba(91, 82, 232, 0.14);
+    color: var(--text-primary);
+}
+
+.light-theme .skill-item:hover {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+.light-theme .skill-item i {
+    color: var(--primary-color);
+}
+
+.light-theme .skill-item:hover i,
+.light-theme .skill-item:hover span {
+    color: #fff;
+}
+
+/* ---- Tech Tags Light ---- */
+.light-theme .tech-tag {
+    background: rgba(241, 245, 255, 0.9);
+    border-color: rgba(91, 82, 232, 0.18);
+    color: var(--text-secondary);
+}
+
+.light-theme .tech-tag:hover {
+    color: #fff;
+    border-color: var(--primary-color);
+}
+
+.light-theme .skill-tag {
+    background: rgba(241, 245, 255, 0.9);
+    border-color: rgba(91, 82, 232, 0.18);
+    color: var(--text-secondary);
+}
+
+.light-theme .skill-tag:hover {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* ---- Contact Light ---- */
+.light-theme .contact {
+    background: rgba(235, 240, 255, 0.5);
+}
+
+.light-theme .contact-item i {
+    color: var(--primary-color) !important;
+}
+
+.light-theme .contact-item h4 {
+    color: var(--text-primary);
+}
+
+.light-theme .contact-item a {
+    color: var(--primary-color);
+}
+
+.light-theme .form-group input,
+.light-theme .form-group textarea {
+    background: rgba(241, 245, 255, 0.9);
+    border-color: rgba(91, 82, 232, 0.18);
+    color: var(--text-primary);
+}
+
+.light-theme .form-group input::placeholder,
+.light-theme .form-group textarea::placeholder {
+    color: var(--text-muted);
+}
+
+.light-theme .form-group input:focus,
+.light-theme .form-group textarea:focus {
+    background: #fff;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(91, 82, 232, 0.1);
+}
+
+.light-theme .form-group i {
+    color: var(--text-muted) !important;
+}
+
+.light-theme .form-group:focus-within i {
+    color: var(--primary-color) !important;
+}
+
+/* ---- Footer Light ---- */
+.light-theme .footer {
+    background: #e8edf8;
+    border-top: 1px solid rgba(91, 82, 232, 0.12);
+}
+
+.light-theme .footer-section h4 {
+    color: var(--text-primary);
+}
+
+.light-theme .footer-section p {
+    color: var(--text-secondary);
+}
+
+.light-theme .footer-links a {
+    color: var(--text-secondary);
+}
+
+.light-theme .footer-links a:hover {
+    color: var(--primary-color);
+}
+
+.light-theme .footer-bottom-content p {
+    color: var(--text-muted);
+}
+
+/* ---- About Stats Light ---- */
+.light-theme .stat {
+    background: rgba(241, 245, 255, 0.9);
+    border-color: rgba(91, 82, 232, 0.15);
+}
+
+.light-theme .stat:hover {
+    border-color: var(--primary-color);
+}
+
+.light-theme .stat p {
+    color: var(--text-muted);
+}
+
+.light-theme .stat:hover p {
+    color: var(--text-secondary);
+}
+
+/* ---- Section backgrounds Light ---- */
+.light-theme .about {
+    background: rgba(235, 240, 255, 0.4);
+}
+
+.light-theme .skills {
+    background: rgba(240, 244, 255, 0.5);
+}
+
+.light-theme .projects {
+    background: rgba(235, 240, 255, 0.4);
+}
+
+.light-theme .education {
+    background: rgba(240, 244, 255, 0.25);
+}
+
+.light-theme .experience {
+    background: rgba(235, 240, 255, 0.3);
+    overflow-x: hidden;
+    /* prevent horizontal scroll from timeline transforms */
+}
+
+/* ---- Timeline Light  ---- */
+.light-theme .timeline::before {
+    box-shadow: 0 0 8px rgba(91, 82, 232, 0.25);
+}
+
+.light-theme .timeline-icon {
+    background: #f0f4ff;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    box-shadow: 0 0 12px rgba(91, 82, 232, 0.3);
+}
+
+.light-theme .timeline-date {
+    background: var(--gradient-primary);
+    color: #fff;
+}
+
+/* ---- Buttons Light ---- */
+.light-theme .btn-outline {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.light-theme .btn-outline:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* ---- Scroll Progress Light ---- */
+.light-theme #scroll-progress {
+    background: linear-gradient(90deg, #5b52e8, #0284c7, #8b36d9);
+    box-shadow: 0 0 8px rgba(91, 82, 232, 0.4);
+}
+
+/* ---- Social links Light ---- */
+.light-theme .social-link {
+    background: rgba(241, 245, 255, 0.9);
+    border-color: rgba(91, 82, 232, 0.18);
+    color: var(--text-secondary);
+}
+
+.light-theme .social-link:hover {
+    color: #fff;
+    border-color: var(--primary-color);
+    box-shadow: 0 6px 20px rgba(91, 82, 232, 0.25);
+}
+
+.light-theme .social-sidebar .sidebar-link {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--text-secondary);
+    border: 1px solid rgba(91, 82, 232, 0.14);
+}
+
+.light-theme .social-sidebar .sidebar-link:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* ---- FAB Light ---- */
+.light-theme .floating-action-btn {
+    background: var(--gradient-primary);
+    box-shadow: var(--glow-primary);
+}
+
+/* =======================================================
+   SKELETON LOADING EFFECT
+   ======================================================= */
+
+/* Overlay that covers the whole page while loading */
+#skeleton-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: var(--background-dark);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+#skeleton-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Shimmer animation */
+@keyframes skeletonShimmer {
+    0% {
+        background-position: -600px 0;
+    }
+
+    100% {
+        background-position: 600px 0;
+    }
+}
+
+.skel {
+    border-radius: 8px;
+    background: linear-gradient(90deg,
+            rgba(108, 99, 255, 0.08) 25%,
+            rgba(108, 99, 255, 0.18) 50%,
+            rgba(108, 99, 255, 0.08) 75%);
+    background-size: 600px 100%;
+    animation: skeletonShimmer 1.4s linear infinite;
+}
+
+.light-theme .skel {
+    background: linear-gradient(90deg,
+            rgba(91, 82, 232, 0.07) 25%,
+            rgba(91, 82, 232, 0.16) 50%,
+            rgba(91, 82, 232, 0.07) 75%);
+    background-size: 600px 100%;
+    animation: skeletonShimmer 1.4s linear infinite;
+}
+
+/* Skeleton navbar */
+.skel-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 2.5rem;
+    border-bottom: 1px solid rgba(108, 99, 255, 0.12);
+}
+
+.skel-logo {
+    width: 120px;
+    height: 36px;
+}
+
+.skel-nav-links {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.skel-nav-link {
+    width: 64px;
+    height: 28px;
+    border-radius: 6px;
+}
+
+/* Skeleton hero */
+.skel-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+    padding: 5rem 2.5rem 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.skel-hero-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.skel-greeting {
+    width: 160px;
+    height: 20px;
+}
+
+.skel-name {
+    width: 85%;
+    height: 52px;
+}
+
+.skel-name-2 {
+    width: 65%;
+    height: 52px;
+}
+
+.skel-subtitle {
+    width: 70%;
+    height: 28px;
+}
+
+.skel-tags {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+
+.skel-tag {
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+}
+
+.skel-para {
+    width: 100%;
+    height: 18px;
+}
+
+.skel-para-2 {
+    width: 90%;
+    height: 18px;
+}
+
+.skel-para-3 {
+    width: 80%;
+    height: 18px;
+}
+
+.skel-btns {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.skel-btn {
+    width: 140px;
+    height: 46px;
+    border-radius: 8px;
+}
+
+
+
+
+.skel-avatar {
+    width: 100%;
+    height: 420px;
+    border-radius: 20px;
+}
+
+/* Skeleton cards row */
+.skel-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 2rem 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.skel-card {
+    height: 160px;
+    border-radius: 16px;
+}
+
+/* Responsive skeleton */
+@media (max-width: 768px) {
+    .skel-hero {
+        grid-template-columns: 1fr;
+        padding: 4rem 1.5rem 2rem;
+    }
+
+    .skel-hero-right {
+        display: none;
+    }
+
+    .skel-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .skel-nav-links {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .skel-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =======================================================
+   SKILLS SECTION — Reorganized (Category grid + icon badges)
+   ======================================================= */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.75rem;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.55rem 0.95rem;
+    background: var(--surface-light);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.25s ease;
+    cursor: default;
+    /* Override animated slide-in so it works on scroll too */
+    opacity: 1;
+    transform: none;
+    animation: none;
+}
+
+/* =======================================================
+   PROJECTS SECTION — Better grid layout
+   ======================================================= */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.75rem;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content .tech-stack {
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
+/* Project card image area — taller */
+.card-image {
+    height: 180px;
+}
+
+/* =======================================================
+   GENERAL MODERN POLISHING
+   ======================================================= */
+
+/* Smooth section transitions */
+section {
+    transition: background 0.4s ease;
+}
+
+/* Better body text contrast in both modes */
+p,
+.card-content p,
+.about-card p,
+.contact-card p {
+    color: var(--text-secondary);
+    line-height: 1.75;
+}
+
+/* ─────────────────────────────────────────────
+   LIGHT THEME — HEADING & TEXT COLOR FIXES
+   All h2/h3 section titles use gradient or
+   white text by default — invisible on light bg.
+   Override everything here comprehensively.
+   ───────────────────────────────────────────── */
+
+/* All headings: dark text in light mode */
+.light-theme h1,
+.light-theme h2,
+.light-theme h3,
+.light-theme h4,
+.light-theme h5,
+.light-theme h6 {
+    color: var(--text-primary) !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+    text-shadow: none !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+}
+
+/* Section titles — keep gradient accent for visual flair but use a readable range */
+.light-theme .section-title,
+.light-theme .education h2,
+.light-theme .experience h2,
+.light-theme .about h2,
+.light-theme .skills h2,
+.light-theme .projects h2,
+.light-theme .contact h2,
+.light-theme .hero-title {
+    background: linear-gradient(135deg, #4338ca 0%, #6d28d9 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    text-shadow: none !important;
+}
+
+/* Explicitly override inline gradient text (hero name / name-highlight) */
+.light-theme .hero-name,
+.light-theme .name-highlight {
+    background: linear-gradient(135deg, #4338ca, #0284c7, #6d28d9) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    filter: none !important;
+    text-shadow: none !important;
+}
+
+/* Section subtitle / label text */
+.light-theme .section-subtitle,
+.light-theme .section-label,
+.light-theme .section-tag {
+    color: var(--primary-color) !important;
+    background: none !important;
+    -webkit-text-fill-color: var(--primary-color) !important;
+}
+
+/* Underline decorators after section headers */
+.light-theme .section-header::after,
+.light-theme .section-title::after {
+    background: linear-gradient(90deg, #4338ca, #0284c7, #6d28d9) !important;
+}
+
+/* Hero greeting line ("Hello, I'm") */
+.light-theme .hero-greeting,
+.light-theme .greeting {
+    color: var(--primary-color) !important;
+    -webkit-text-fill-color: var(--primary-color) !important;
+}
+
+/* Timeline content headings */
+.light-theme .timeline-content h3,
+.light-theme .timeline-content h4 {
+    color: var(--text-primary) !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+}
+
+/* Card headings */
+.light-theme .card-content h3 {
+    color: var(--text-primary) !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+}
+
+.light-theme .project-card:hover .card-content h3 {
+    color: var(--primary-color) !important;
+    -webkit-text-fill-color: var(--primary-color) !important;
+}
+
+/* Skills category heading */
+.light-theme .category-header h3 {
+    color: var(--text-primary) !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+}
+
+/* Contact card headings */
+.light-theme .contact-card h3,
+.light-theme .contact-card h4 {
+    color: var(--text-primary) !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+}
+
+/* Footer headings */
+.light-theme .footer-section h4 {
+    color: var(--text-primary) !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+}
+
+/* About card headings */
+.light-theme .about-card h3,
+.light-theme .about-card h4 {
+    color: var(--text-primary) !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+}
+
+/* Stat number gradient — keep visible in light mode */
+.light-theme .stat-number {
+    background: linear-gradient(135deg, #4338ca, #0284c7) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    filter: none !important;
+    text-shadow: none !important;
+}
+
+/* General paragraph text */
+.light-theme p {
+    color: var(--text-secondary);
+    -webkit-text-fill-color: var(--text-secondary);
+}
+
+/* Nav logo text gradient */
+.light-theme .logo-text {
+    background: linear-gradient(135deg, #4338ca, #0284c7, #6d28d9) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+/* ─── Italic Accent — light mode override ─── */
+/* The dark-mode .italic-accent uses neon purple/cyan which looks washed out on white.
+   Light mode uses a rich indigo-violet gradient instead for contrast and elegance. */
+.light-theme .italic-accent {
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-style: italic !important;
+    font-weight: 700 !important;
+    background: linear-gradient(135deg, #6d28d9 0%, #4338ca 50%, #0284c7 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    text-shadow: none !important;
+}
+
+/* ═══════════════════════════════════════════════════
+   LIQUID GLASS — LIGHT THEME
+   Light glass is very different from dark glass:
+   - Higher opacity white background (feels opaque/milky)
+   - Stronger saturation + brightness in backdrop-filter
+   - Top specular is brighter white (more contrast vs light bg)
+   - Shadows are softer and warm-tinted
+   - Shimmer is slightly more visible (indigo streak)
+   ═══════════════════════════════════════════════════ */
+
+.light-theme {
+    --lg-bg: rgba(255, 255, 255, 0.55);
+    --lg-border: rgba(255, 255, 255, 0.80);
+    --lg-highlight: rgba(255, 255, 255, 0.95);
+    /* bright top edge */
+    --lg-inner-shadow: rgba(91, 82, 232, 0.08);
+    /* subtle tinted depth */
+    --lg-blur: blur(28px) saturate(200%) brightness(105%);
+    --lg-shimmer: rgba(255, 255, 255, 0.45);
+    /* visible on light */
+    --lg-tint-primary: rgba(91, 82, 232, 0.05);
+    --lg-tint-cyan: rgba(2, 132, 199, 0.03);
+}
+
+/* Navbar glass — frosted white bar */
+.light-theme .navbar {
+    background: rgba(255, 255, 255, 0.62) !important;
+    backdrop-filter: blur(28px) saturate(200%) brightness(108%) !important;
+    -webkit-backdrop-filter: blur(28px) saturate(200%) brightness(108%) !important;
+    box-shadow:
+        0 4px 24px rgba(91, 82, 232, 0.10),
+        0 1px 0 rgba(255, 255, 255, 0.95),
+        inset 0 1px 0 rgba(255, 255, 255, 0.95),
+        inset 0 -1px 0 rgba(91, 82, 232, 0.06) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.75) !important;
+}
+
+/* Project cards — white milky glass */
+.light-theme .project-card {
+    background: rgba(255, 255, 255, 0.58) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.98) !important;
+    border: 1px solid rgba(255, 255, 255, 0.72) !important;
+    box-shadow:
+        0 8px 32px rgba(91, 82, 232, 0.12),
+        0 2px 8px rgba(91, 82, 232, 0.06),
+        inset 0 1.5px 0 rgba(255, 255, 255, 0.95),
+        inset 0 -1px 0 rgba(91, 82, 232, 0.05) !important;
+}
+
+/* Skill cards */
+.light-theme .skill-category {
+    background: rgba(255, 255, 255, 0.58) !important;
+    border: 1px solid rgba(255, 255, 255, 0.78) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.98) !important;
+    box-shadow:
+        0 6px 24px rgba(91, 82, 232, 0.10),
+        inset 0 1.5px 0 rgba(255, 255, 255, 0.95),
+        inset 0 -1px 0 rgba(91, 82, 232, 0.04) !important;
+}
+
+/* About cards */
+.light-theme .about-card {
+    background: rgba(255, 255, 255, 0.60) !important;
+    border: 1px solid rgba(255, 255, 255, 0.75) !important;
+    box-shadow:
+        0 8px 32px rgba(91, 82, 232, 0.10),
+        inset 0 1.5px 0 rgba(255, 255, 255, 0.95),
+        inset 0 -1px 0 rgba(91, 82, 232, 0.05) !important;
+}
+
+/* Timeline cards */
+.light-theme .timeline-content {
+    background: rgba(255, 255, 255, 0.60) !important;
+    border: 1px solid rgba(255, 255, 255, 0.78) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.98) !important;
+    box-shadow:
+        0 6px 24px rgba(91, 82, 232, 0.10),
+        inset 0 1.5px 0 rgba(255, 255, 255, 0.95),
+        inset 0 -1px 0 rgba(91, 82, 232, 0.04) !important;
+}
+
+/* Contact cards */
+.light-theme .contact-card {
+    background: rgba(255, 255, 255, 0.62) !important;
+    border: 1px solid rgba(255, 255, 255, 0.78) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.98) !important;
+    box-shadow:
+        0 6px 24px rgba(91, 82, 232, 0.10),
+        inset 0 1.5px 0 rgba(255, 255, 255, 0.95),
+        inset 0 -1px 0 rgba(91, 82, 232, 0.04) !important;
+}
+
+/* Contact form */
+.light-theme .contact-form {
+    background: rgba(255, 255, 255, 0.60) !important;
+    border: 1px solid rgba(255, 255, 255, 0.75) !important;
+    box-shadow:
+        0 10px 40px rgba(91, 82, 232, 0.12),
+        inset 0 1.5px 0 rgba(255, 255, 255, 0.95),
+        inset 0 -1px 0 rgba(91, 82, 232, 0.05) !important;
+}
+
+/* Form inputs in light mode */
+.light-theme .form-group input,
+.light-theme .form-group textarea {
+    background: rgba(255, 255, 255, 0.80) !important;
+    /* Visible border — NOT white on white */
+    border: 1.5px solid rgba(99, 102, 241, 0.22) !important;
+    color: var(--text-primary) !important;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.90),
+        inset 0 -1px 0 rgba(91, 82, 232, 0.06) !important;
+}
+
+.light-theme .form-group input:hover,
+.light-theme .form-group textarea:hover {
+    border-color: rgba(99, 102, 241, 0.40) !important;
+    box-shadow:
+        0 4px 12px rgba(91, 82, 232, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.95) !important;
+}
+
+.light-theme .form-group input:focus,
+.light-theme .form-group textarea:focus {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-color: rgba(91, 82, 232, 0.50) !important;
+    box-shadow:
+        0 0 0 3px rgba(91, 82, 232, 0.10),
+        inset 0 1px 0 rgba(255, 255, 255, 0.95),
+        inset 0 -1px 0 rgba(91, 82, 232, 0.06) !important;
+}
+
+/* Footer glass in light mode */
+.light-theme .footer {
+    background: rgba(255, 255, 255, 0.55) !important;
+    backdrop-filter: blur(28px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(28px) saturate(180%) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.85) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Shimmer streak colour in light mode — indigo tinted */
+.light-theme .project-card::after,
+.light-theme .skill-category::after,
+.light-theme .timeline-content::after {
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(91, 82, 232, 0.06) 45%,
+            rgba(255, 255, 255, 0.55) 50%,
+            rgba(91, 82, 232, 0.06) 55%,
+            transparent 100%) !important;
+}
